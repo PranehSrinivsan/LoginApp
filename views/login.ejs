@@ -1,19 +1,29 @@
-<h3>Login</h3>
-<form action="/login" method="POST">
+<div class="center">
+    <%- include('./styles'); %>
+    <h1>Login</h1>
+    <form action="/login" method="post">
 
-    <div>
-        <label for="email">Email ID:</label>
-        <input type="email" name="email" id="email" required>
-    </div>
+        <div class="inputbox">
+            <input type="email" name="email" id="email" required>
+            <span>Email</span>
+        </div>
         
-    <div>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required>
-    </div>
-        
-    <button type="submit">Login</button>
-</form>
-<% if(messages.error) { %>
-    <%= messages.error %>
-<% } %>
-<a href="/register">Register</a>
+        <div class="inputbox">
+            <input type="password" name="password" id="password" required>
+            <span>Password</span>
+        </div>
+
+        <div class="inputbox">
+            <button type="submit" >Login</button>
+        </div>
+
+    </form>
+    <span> Don't have an account? </span>
+    <a href="/register">Register</a>
+</div>
+<div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <%if(messages.error){%>
+        <%=messages.error%>
+    <%}%>
+</div>

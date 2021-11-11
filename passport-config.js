@@ -4,7 +4,7 @@ function initialize(passport,getUserByEmail,getUserById){
     const authenticateUser = (email ,password ,done)=>{
         const user = getUserByEmail(email)
         if(user == null){
-            return done(null, false ,{message: "User dose not exists"})
+            return done(null, false ,{message: "User dose not exists, Register to login"})
         }
         try{
             if(password == user.password){
