@@ -8,7 +8,7 @@ function initialize(passport,getUserByEmail,getUserById){
         }
         try{
             if(password == user.password){
-                return done(null ,user)
+                return done(null ,user)//success
             }
             else{
                 return done(null ,false,{message: "Password incorrect"})
