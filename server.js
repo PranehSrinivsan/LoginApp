@@ -27,9 +27,10 @@ app.use(session({
 }))
 app.use(passport.initialize())
 app.use(passport.session())
-
+console.log("hello")
 app.get('/',(req,res) => {
     res.render('index.ejs')
+    
 })
 
 app.get('/login',(req,res) => {
